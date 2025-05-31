@@ -11,8 +11,8 @@ class TestModelPipeline(unittest.TestCase):
     def setUp(self):
         self.model = OnnxModel("assets/model.onnx")
         self.preprocessor = Preprocessor()
-        self.image1 = ImageLoader.load("assets/image1.jpg")
-        self.image2 = ImageLoader.load("assets/image2.jpg")
+        self.image1 = ImageLoader.load("assets/n01440764_tench.jpeg")
+        self.image2 = ImageLoader.load("assets/n01667114_mud_turtle.jpeg")
 
     def test_image_loading(self):
         self.assertIsInstance(self.image1, Image.Image)
