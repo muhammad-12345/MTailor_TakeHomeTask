@@ -6,8 +6,8 @@ import base64
 import os
 
 # === Required ===
-API_URL = "https://YOUR_CEREBRIUM_DEPLOYMENT_URL/predict"  # e.g., https://xyz.cerebrium.ai/predict
-API_KEY = "YOUR_CEREBRIUM_API_KEY"                          # Paste your key or load from env
+API_URL = "https://YOUR_CEREBRIUM_DEPLOYMENT_URL/predict"  
+API_KEY = "YOUR_CEREBRIUM_API_KEY"                         
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
@@ -30,7 +30,7 @@ def predict(image_path: str):
         result = res.json()
         print(f"✅ Image: {image_path} → Predicted class: {result.get('predicted_class')}")
     except Exception as e:
-        print(f"❌ Error for {image_path}: {e}")
+        print(f"Error for {image_path}: {e}")
 
 
 def run_preset_tests():

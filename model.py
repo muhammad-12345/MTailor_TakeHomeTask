@@ -22,7 +22,7 @@ class Preprocessor:
     def process(self, img: Image.Image) -> np.ndarray:
         if img.mode != 'RGB':
             img = img.convert('RGB')
-        tensor = self.transform(img).unsqueeze(0)  # shape: (1, 3, 224, 224)
+        tensor = self.transform(img).unsqueeze(0) 
         return tensor.numpy()
 
 
@@ -47,11 +47,11 @@ class ImageLoader:
             raise RuntimeError(f"Failed to load image '{image_path}': {str(e)}")
 
 
-# Example usage (can be removed/commented in production)
+
 if __name__ == "__main__":
     preprocessor = Preprocessor()
     model = OnnxModel("assets/model.onnx")
-    image = ImageLoader.load("assets/image1.jpg")
+    image = ImageLoader.load("assets/n01667114_mud_turtle.jpg")
 
     processed = preprocessor.process(image)
     pred_class = model.predict(processed)

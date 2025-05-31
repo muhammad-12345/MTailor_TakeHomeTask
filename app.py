@@ -16,7 +16,7 @@ preprocessor = Preprocessor()
 
 # Define input data model
 class ImageRequest(BaseModel):
-    image: str  # base64 encoded image
+    image: str 
 
 @app.post("/predict")
 async def predict(req: ImageRequest):
