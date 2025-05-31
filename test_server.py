@@ -7,7 +7,7 @@ import os
 
 # === Required ===
 API_URL = "https://YOUR_CEREBRIUM_DEPLOYMENT_URL/predict"  
-API_KEY = "YOUR_CEREBRIUM_API_KEY"                         
+API_KEY = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZWN0SWQiOiJwLTcwNGFkMGVlIiwibmFtZSI6IiIsImRlc2NyaXB0aW9uIjoiIiwiZXhwIjoyMDY0MjYxNDI5fQ.eKz-LMb3xQVzrzIjsXsklHwhWa723gs8wE11FxQChGFRC4-WWSjgK7H2BJv3uddlaz0StUkHvORmwaPXVNkXAdvuCv__ELr9IcGTkupJ0Gwo0Dsu-NaAfAfpWQIx4Ev6uWMT5zkXUQUGcypIFyCZK2cweaHofqb2SgkTLwKrdgwv770jGrKRyjsBt78ercTLOoNbEpEDt_8CZJbqqOeln-Gsg52B9a1YdE6pdX4hZuFvO0DS8Uk8UWVCa0JZ0BSYMOi18VUPO6s4DMYiOlCYJpiwFGyJYIiICDjuZbQrvvL__Q1uylHFa-Byez33vR6qTd_yJEKnjvupQ7lM7RVxBw"                         
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",

@@ -51,7 +51,7 @@ class ImageLoader:
 if __name__ == "__main__":
     preprocessor = Preprocessor()
     model = OnnxModel("assets/model.onnx")
-    image = ImageLoader.load("assets/n01667114_mud_turtle.jpg")
+    image = ImageLoader.load("assets/n01667114_mud_turtle.jpeg")
 
     processed = preprocessor.process(image)
     pred_class = model.predict(processed)
