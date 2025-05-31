@@ -16,21 +16,20 @@ preprocessor = Preprocessor()
 
 # Define input data model
 class ImageRequest(BaseModel):
-    image: str 
+    param_1: str 
 
-@app.post("/predict")
-async def predict(req: ImageRequest):
+@app.post("/run")
+async def run(req: ImageRequest):
     try:
-        # Decode base64 string to bytes
         image_data = base64.b64decode(req.image)
         image = Image.open(io.BytesIO(image_data))
 
-        # Preprocess image
         input_array = preprocessor.process(image)
-
-        # Run inference
         class_id = model.predict(input_array)
 
-        return {"predicted_class": class_id}
+        # ✅ return using param_1 format
+        return {"param_1": class_id}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
