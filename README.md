@@ -1,7 +1,5 @@
 # MTailor_TakeHomeTask
 
-# Image Classification Model Deployment (ONNX + Cerebrium)
-
 This repository contains all the components to deploy an image classification model (trained on ImageNet) using ONNX and serve it via Cerebrium’s serverless GPU platform using a custom Docker image.
 
 ---
